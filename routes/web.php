@@ -15,5 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/hello',function(){
-    return "Hello World!";
+    $user=[
+        'name'=>'Nghia',
+        'age'=>'23',
+        'hometown'=>'Hai Phong'
+    ];
+    return view('hello',['test'=>$user]);
 });
